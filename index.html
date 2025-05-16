@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Speed Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WiFi Speed Test</h1>
+        <div class="speedometer">
+            <div class="gauge download-gauge">
+                <div class="gauge-body">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-cover">0 Mbps</div>
+                </div>
+                <div class="gauge-label">Download</div>
+            </div>
+            <div class="gauge upload-gauge">
+                <div class="gauge-body">
+                    <div class="gauge-fill"></div>
+                    <div class="gauge-cover">0 Mbps</div>
+                </div>
+                <div class="gauge-label">Upload</div>
+            </div>
+        </div>
+        <div class="ping-display">Ping: <span id="ping-value">--</span> ms</div>
+        <button id="start-test" class="test-button">Start Test</button>
+        <div class="status" id="status">Ready to test</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
