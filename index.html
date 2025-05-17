@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WiFi Speed Tester</title>
     <link rel="stylesheet" href="styles.css">
+    
+<style>
+.helal-stamp {
+  display: inline-block;
+  background: #000;
+  border-radius: 4px;
+  padding: 4px 8px 4px 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.helal-stamp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.stamp-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stamp-text {
+  color: #aaa;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.helal-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.helal-logo span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+</style>
 </head>
 <body>
     <div class="container">
@@ -30,6 +73,21 @@
         <div class="status" id="status">Ready to test</div>
     </div>
 
+    <div class="helal-stamp">
+  <div class="stamp-inner">
+    <span class="stamp-text">Made by</span>
+    <div class="helal-logo">
+      <svg viewBox="0 0 100 100" width="20" height="20">
+    <div style="width: 30px; height: 30px; border-radius: 50%; overflow: hidden; border: 2px solid white;">
+      <img src="assets/images/Helal_logo.png" alt="HELAL logo" width="30" height="30" style="display: block;">
+    </div>
+
+      </svg>
+      <span>HELAL</span>
+    </div>
+  </div>
+</div>
+    
     <script src="script.js"></script>
 </body>
 </html>
