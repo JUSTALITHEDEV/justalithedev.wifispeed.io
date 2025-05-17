@@ -3,93 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiFi Speed Tester</title>
+    <title>WiFi Speed Tester | HELAL</title>
     <link rel="stylesheet" href="styles.css">
-    
-<style>
-.helal-stamp {
-  display: inline-block;
-  background: #000;
-  border-radius: 4px;
-  padding: 4px 8px 4px 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-.helal-stamp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.stamp-inner {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.stamp-text {
-  color: #aaa;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-}
-
-.helal-logo {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.helal-logo span {
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>WiFi Speed Test</h1>
+        <div class="header">
+            <h1>WiFi Speed Test</h1>
+            <div class="helal-stamp">
+                <div class="stamp-inner">
+                    <span class="stamp-text">Made by</span>
+                    <div class="helal-logo">
+                        <div class="logo-container">
+                            <a href="https://justalithedev.github.io/justalithedev.helal.io/helal-website/index.html" target="_blank">
+                                <img src="Helal_logo.png" alt="HELAL logo" width="30" height="30">
+                            </a>
+                        </div>
+                        <span>HELAL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="speedometer">
             <div class="gauge download-gauge">
                 <div class="gauge-body">
                     <div class="gauge-fill"></div>
                     <div class="gauge-cover">0 Mbps</div>
                 </div>
-                <div class="gauge-label">Download</div>
+                <div class="gauge-label">
+                    <i class="fas fa-download"></i> Download
+                </div>
             </div>
             <div class="gauge upload-gauge">
                 <div class="gauge-body">
                     <div class="gauge-fill"></div>
                     <div class="gauge-cover">0 Mbps</div>
                 </div>
-                <div class="gauge-label">Upload</div>
+                <div class="gauge-label">
+                    <i class="fas fa-upload"></i> Upload
+                </div>
             </div>
         </div>
-        <div class="ping-display">Ping: <span id="ping-value">--</span> ms</div>
-        <button id="start-test" class="test-button">Start Test</button>
+        
+        <div class="ping-display">
+            <i class="fas fa-network-wired"></i> Ping: <span id="ping-value">--</span> ms
+        </div>
+        
+        <div class="test-controls">
+            <button id="start-test" class="test-button">
+                <i class="fas fa-play"></i> Start Test
+            </button>
+            <button id="info-btn" class="info-button">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </div>
+        
         <div class="status" id="status">Ready to test</div>
+        
+        <div class="history">
+            <h3><i class="fas fa-history"></i> Test History</h3>
+            <div id="history-list" class="history-list"></div>
+        </div>
     </div>
 
-    
-    
-    <div class="helal-stamp">
-  <div class="stamp-inner">
-    <span class="stamp-text">Made by</span>
-    <div class="helal-logo">
-      <svg viewBox="0 0 100 100" width="20" height="20">
-    <div style="width: 30px; height: 30px; border-radius: 50%; overflow: hidden; border: 2px solid white;">
-      <a href="https://justalithedev.github.io/justalithedev.helal.io/helal-website/index.html"> <img src="Helal_logo.png" alt="HELAL logo" width="30" height="30" style="display: block;"> </a>
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About WiFi Speed Tester</h2>
+            <p>This tool measures your internet connection speed by:</p>
+            <ul>
+                <li><strong>Ping:</strong> Measures latency to the server (lower is better)</li>
+                <li><strong>Download:</strong> Tests how fast you can receive data</li>
+                <li><strong>Upload:</strong> Tests how fast you can send data</li>
+            </ul>
+            <p>For best results, close other bandwidth-intensive applications during the test.</p>
+            <div class="modal-footer">
+                <div class="helal-stamp">
+                    <div class="stamp-inner">
+                        <span class="stamp-text">Made by</span>
+                        <div class="helal-logo">
+                            <div class="logo-container">
+                                <a href="https://justalithedev.github.io/justalithedev.helal.io/helal-website/index.html" target="_blank">
+                                    <img src="Helal_logo.png" alt="HELAL logo" width="30" height="30">
+                                </a>
+                            </div>
+                            <span>HELAL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-      </svg>
-      <span>HELAL</span>
-    </div>
-  </div>
-</div>
-    
     <script src="script.js"></script>
 </body>
 </html>
